@@ -1844,38 +1844,73 @@
         </div>
 
         <div class="item">
-          <h3><span class="item-num">7.</span> Перетворюйте рядкові значення на числа в задачі 3</h3>
+          <h3>
+            <span class="item-num">7.</span> Правильно враховуйте padding і border у задачі 3
+          </h3>
+        
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Обчислення виконуються над рядками, через що результат виходить некоректним.</p>
+            <p>
+              Під час обчислення загальної ширини <code>padding</code> і
+              <code>border</code> додаються лише один раз.
+            </p>
           </div>
+        
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Перед математичними операціями отримайте числові значення з рядків формату <code>Npx</code>.</p>
+            <p>
+              Враховуйте, що <code>padding</code> і <code>border</code> є зліва та
+              справа, тому кожне значення потрібно додати двічі:
+              <code>content + padding * 2 + border * 2</code>.
+            </p>
           </div>
         </div>
-
+        
         <div class="item">
-          <h3><span class="item-num">8.</span> Повертайте число в задачі 3</h3>
+          <h3>
+            <span class="item-num">8.</span> Працюйте з числами та повертайте число в задачі 3
+          </h3>
+        
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Функція повертає рядок замість числа.</p>
+            <p>
+              До значень додається <code>px</code>, виконується зайве перетворення
+              даних або функція повертає рядок замість числа.
+            </p>
           </div>
+        
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Функція <code>getElementWidth()</code> повинна повертати числове значення загальної ширини елемента.</p>
+            <p>
+              Функція <code>getElementWidth()</code> отримує числові значення
+              <code>content</code>, <code>padding</code> і <code>border</code> та
+              повинна повертати число. Не додавайте одиниці вимірювання
+              <code>px</code> і не виконуйте зайвий парсинг.
+            </p>
           </div>
         </div>
-
+        
         <div class="item">
-          <h3><span class="item-num">9.</span> Перевіряйте консоль перед здачею</h3>
+          <h3>
+            <span class="item-num">9.</span> Перевіряйте консоль перед здачею
+          </h3>
+        
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>У консолі присутні помилки або не відображаються результати всіх завдань.</p>
+            <p>
+              У консолі присутні помилки, не відображаються результати всіх завдань
+              або отримані значення не відповідають очікуваним.
+            </p>
           </div>
+        
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Перед здачею відкрийте живу сторінку та переконайтеся, що всі приклади працюють коректно, а в консолі відсутні помилки.</p>
+            <p>
+              Перед здачею відкрийте живу сторінку та перевірте результати всіх
+              <code>console.log</code>. Переконайтеся, що в консолі немає помилок,
+              а функція в задачі 3 повертає коректне числове значення, зокрема для
+              дробових значень і нулів.
+            </p>
           </div>
         </div>
       </article>
