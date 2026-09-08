@@ -884,14 +884,14 @@
         </div>
 
         <div class="item">
-          <h3><span class="item-num">5.</span> Не залишайте fill всередині SVG</h3>
+          <h3><span class="item-num">5.</span> Використовуйте color для зміни кольору SVG-іконок</h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Колір іконки зашитий всередині SVG-файлу через атрибут <code>fill</code>.</p>
+            <p>Колір SVG-іконки задається через CSS-властивість <code>fill</code>, хоча у спрайті для <code>fill</code> використовується значення <code>currentColor</code>.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Видаляйте <code>fill</code> з SVG та стилізуйте його через CSS. Виняток — іконки секції Our Features, які залишаються статичними відповідно до макета.</p>
+            <p>Задавайте колір SVG-іконки через CSS-властивість <code>color</code>. Завдяки <code>fill="currentColor"</code> іконка автоматично використовує значення <code>color</code>. Для іконок секції Our Features додатково змінювати колір не потрібно.</p>
           </div>
         </div>
 
@@ -1336,14 +1336,14 @@
         </div>
 
         <div class="item">
-          <h3><span class="item-num">20.</span> Не забувайте стилізувати fill у галочки</h3>
+          <h3><span class="item-num">20.</span> Не забувайте стилізувати color у галочки</h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
             <p>Колір галочки не відповідає макету.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Для SVG-галочки явно задавайте необхідний <code>fill</code> відповідно до дизайну.</p>
+            <p>Для SVG-галочки явно задавайте необхідний <code>color</code> відповідно до дизайну.</p>
           </div>
         </div>
 
@@ -1355,7 +1355,7 @@
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Базовий <code>fill</code> задавайте самій SVG-іконці та змінюйте його через селектор кнопки у станах hover і focus.</p>
+            <p>Базовий <code>color</code> задавайте самій SVG-іконці та змінюйте його через селектор кнопки у станах hover і focus.</p>
           </div>
         </div>
 
