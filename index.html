@@ -3166,9 +3166,9 @@
         <div class="module-banner">
           <span class="tag">МОДУЛЬ 10</span>
           <h2>Асинхронний JavaScript і проміси</h2>
-          <p class="msub">Таймер зворотного відліку, флатпікр, іziToast та створення промісів.</p>
+          <p class="msub">Генератор сповіщень Sunny Coffee: FormData, проміси та iziToast.</p>
         </div>
-
+      
         <div class="item">
           <h3><span class="item-num">1.</span> Використовуйте Vite</h3>
           <div class="callout c-error">
@@ -3177,288 +3177,192 @@
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Використовуйте шаблон Vite та запускайте проєкт через <code>npm run dev</code>.</p>
+            <p>Використовуйте готовий шаблон із ТЗ та запускайте проєкт через <code>npm run dev</code>.</p>
           </div>
         </div>
-
+      
         <div class="item">
           <h3><span class="item-num">2.</span> Дотримуйтесь структури проєкту</h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Файли створені не у тих папках або мають неправильні назви.</p>
+            <p>Файли мають неправильні назви або розташовані не в тих папках.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Структура папок і файлів повинна повністю відповідати схемі з технічного завдання.</p>
+            <p>Дотримуйтесь структури з ТЗ. Виконуйте завдання у файлах <code>index.html</code> і <code>app.js</code>.</p>
           </div>
         </div>
-
+      
         <div class="item">
-          <h3><span class="item-num">3.</span> Встановлюйте бібліотеки через npm</h3>
+          <h3><span class="item-num">3.</span> Встановлюйте iziToast через npm</h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p><code>flatpickr</code> або <code>iziToast</code> підключаються через CDN.</p>
+            <p>Бібліотека підключається через CDN.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Встановлюйте бібліотеки через npm та імпортуйте їх у JS-файлах.</p>
+            <p>Встановіть iziToast через npm та імпортуйте її в JS-файлі.</p>
           </div>
         </div>
-
+      
         <div class="item">
-          <h3><span class="item-num">4.</span> Не забувайте імпортувати стилі бібліотек</h3>
+          <h3><span class="item-num">4.</span> Не забувайте імпортувати стилі бібліотеки</h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
             <p>Імпортовано лише JS бібліотеки.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Окрім основного імпорту, підключайте CSS файли бібліотек через <code>import</code>.</p>
+            <p>Окрім основного імпорту iziToast, підключіть її CSS через <code>import</code>.</p>
           </div>
         </div>
-
+      
         <div class="item">
-          <h3><span class="item-num">5.</span> Кнопка Start повинна бути неактивною при завантаженні сторінки</h3>
+          <h3><span class="item-num">5.</span> Збережіть атрибути полів форми</h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Кнопка доступна одразу після відкриття сторінки.</p>
+            <p>Змінено назви полів або значення радіокнопок.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Після завантаження сторінки встановіть для кнопки властивість <code>disabled</code>.</p>
+            <p>Використовуйте назви <code>delay</code> і <code>state</code>, значення <code>fulfilled</code> та <code>rejected</code>. Збережіть атрибути <code>required</code>, а для кнопки — <code>type="submit"</code>.</p>
           </div>
         </div>
-
+      
         <div class="item">
-          <h3><span class="item-num">6.</span> Перевіряйте дату на майбутнє</h3>
-          <div class="callout c-error">
-            <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Таймер запускається навіть для дат у минулому.</p>
-          </div>
-          <div class="callout c-how">
-            <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>У методі <code>onClose()</code> перевіряйте, що обрана дата більша за поточну.</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <h3><span class="item-num">7.</span> Не забувайте повторно блокувати кнопку Start</h3>
-          <div class="callout c-error">
-            <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Користувач спочатку обирає валідну дату, кнопка стає активною, а потім обирає дату з минулого і кнопка залишається доступною.</p>
-          </div>
-          <div class="callout c-how">
-            <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>При кожному виборі дати оновлюйте стан кнопки відповідно до валідності дати.</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <h3><span class="item-num">8.</span> Використовуйте iziToast замість <code>alert</code></h3>
-          <div class="callout c-error">
-            <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Для повідомлення про неправильну дату використовується <code>window.alert()</code>.</p>
-          </div>
-          <div class="callout c-how">
-            <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Використовуйте бібліотеку iziToast згідно вимог ТЗ.</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <h3><span class="item-num">9.</span> Зберігайте обрану дату в окремій змінній</h3>
-          <div class="callout c-error">
-            <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Дата доступна лише всередині <code>onClose()</code>.</p>
-          </div>
-          <div class="callout c-how">
-            <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Створіть змінну <code>userSelectedDate</code> поза функціями та записуйте в неї валідну дату.</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <h3><span class="item-num">10.</span> Блокуйте інпут під час роботи таймера</h3>
-          <div class="callout c-error">
-            <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Після запуску таймера користувач може змінювати дату.</p>
-          </div>
-          <div class="callout c-how">
-            <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Після натискання Start робіть інпут неактивним.</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <h3><span class="item-num">11.</span> Блокуйте кнопку Start після запуску таймера</h3>
-          <div class="callout c-error">
-            <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Користувач може запускати кілька інтервалів одночасно.</p>
-          </div>
-          <div class="callout c-how">
-            <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Одразу після старту таймера вимикайте кнопку Start.</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <h3><span class="item-num">12.</span> Не забувайте очищати <code>setInterval</code></h3>
-          <div class="callout c-error">
-            <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Інтервал продовжує працювати після завершення таймера.</p>
-          </div>
-          <div class="callout c-how">
-            <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>При досягненні нуля викликайте <code>clearInterval()</code>.</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <h3><span class="item-num">13.</span> Після завершення таймера активуйте інпут</h3>
-          <div class="callout c-error">
-            <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Після завершення відліку неможливо вибрати нову дату.</p>
-          </div>
-          <div class="callout c-how">
-            <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Після зупинки таймера знову робіть інпут активним.</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <h3><span class="item-num">14.</span> Використовуйте <code>convertMs</code> без змін</h3>
-          <div class="callout c-error">
-            <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Студенти переписують функцію або змінюють логіку розрахунків.</p>
-          </div>
-          <div class="callout c-how">
-            <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Використовуйте готову функцію з ТЗ.</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <h3><span class="item-num">15.</span> Форматуйте значення через <code>padStart</code></h3>
-          <div class="callout c-error">
-            <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>В інтерфейсі відображаються значення типу <code>1:5:9</code> замість <code>01:05:09</code>.</p>
-          </div>
-          <div class="callout c-how">
-            <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Створіть функцію <code>addLeadingZero</code> та використовуйте <code>padStart(2, '0')</code>.</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <h3><span class="item-num">16.</span> Таймер має завершуватись на 00:00:00:00</h3>
-          <div class="callout c-error">
-            <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>З'являються від'ємні значення або таймер продовжує рахувати.</p>
-          </div>
-          <div class="callout c-how">
-            <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>При досягненні нуля оновіть інтерфейс останній раз та зупиніть інтервал.</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <h3><span class="item-num">17.</span> Створюйте Promise після submit форми</h3>
+          <h3><span class="item-num">6.</span> Створюйте Promise після submit форми</h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
             <p>Проміс створюється під час введення даних або до відправлення форми.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Створюйте проміс тільки після події <code>submit</code>.</p>
+            <p>Створюйте новий проміс в обробнику події <code>submit</code> для кожного відправлення форми.</p>
           </div>
         </div>
-
+      
         <div class="item">
-          <h3><span class="item-num">18.</span> Не забувайте <code>preventDefault()</code></h3>
+          <h3><span class="item-num">7.</span> Не забувайте <code>preventDefault()</code></h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Після сабміту сторінка перезавантажується.</p>
+            <p>Після відправлення форми сторінка перезавантажується.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Викликайте <code>event.preventDefault()</code> у обробнику submit.</p>
+            <p>Викликайте <code>event.preventDefault()</code> на початку обробника <code>submit</code>.</p>
           </div>
         </div>
-
+      
         <div class="item">
-          <h3><span class="item-num">19.</span> Значення <code>delay</code> повинно використовуватись у <code>setTimeout</code></h3>
+          <h3><span class="item-num">8.</span> Зчитуйте значення через FormData</h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Проміс виконується миттєво незалежно від введеного значення.</p>
+            <p>Дані форми зчитуються іншим способом, хоча ТЗ вимагає FormData.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Передавайте <code>delay</code> у <code>setTimeout()</code>.</p>
+            <p>Створіть FormData для форми й отримайте значення полів <code>delay</code> та <code>state</code> через метод <code>get()</code>.</p>
           </div>
         </div>
-
+      
         <div class="item">
-          <h3><span class="item-num">20.</span> <code>resolve</code> та <code>reject</code> повинні отримувати <code>delay</code></h3>
+          <h3><span class="item-num">9.</span> Перетворюйте <code>delay</code> на число</h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>У resolve/reject передаються готові повідомлення або викликається iziToast.</p>
+            <p>Затримка залишається рядком після зчитування з форми.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Передавайте лише значення delay: <code>resolve(delay);</code> або <code>reject(delay);</code></p>
+            <p>Перетворіть значення <code>delay</code> на число за допомогою <code>Number()</code>.</p>
           </div>
         </div>
-
+      
         <div class="item">
-          <h3><span class="item-num">21.</span> Повідомлення показуйте в <code>then</code> та <code>catch</code></h3>
+          <h3><span class="item-num">10.</span> Використовуйте <code>delay</code> у <code>setTimeout</code></h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Логіка відображення повідомлень знаходиться всередині Promise.</p>
+            <p>Проміс завершується миттєво незалежно від введеної затримки.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Створення проміса та його обробка мають бути розділені.</p>
+            <p>Передавайте <code>delay</code> у <code>setTimeout()</code>. Викликайте <code>resolve</code> або <code>reject</code> усередині його колбека.</p>
           </div>
         </div>
-
+      
         <div class="item">
-          <h3><span class="item-num">22.</span> Використовуйте iziToast замість <code>console.log</code></h3>
+          <h3><span class="item-num">11.</span> Враховуйте обраний статус</h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Результат роботи проміса виводиться через <code>console.log</code>.</p>
+            <p>Проміс завжди виконується успішно незалежно від обраної радіокнопки.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Використовуйте повідомлення iziToast.</p>
+            <p>Для <code>fulfilled</code> викликайте <code>resolve</code>, а для <code>rejected</code> — <code>reject</code>.</p>
           </div>
         </div>
-
+      
         <div class="item">
-          <h3><span class="item-num">23.</span> Для fulfilled використовуйте success</h3>
+          <h3><span class="item-num">12.</span> Передавайте <code>delay</code> у <code>resolve</code> та <code>reject</code></h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Усі повідомлення мають однаковий вигляд.</p>
+            <p>У resolve або reject передаються готові повідомлення чи виклики iziToast.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Для успішного виконання використовуйте стиль success.</p>
+            <p>Передавайте лише значення затримки: <code>resolve(delay)</code> або <code>reject(delay)</code>.</p>
           </div>
         </div>
-
+      
         <div class="item">
-          <h3><span class="item-num">24.</span> Для rejected використовуйте error</h3>
+          <h3><span class="item-num">13.</span> Показуйте повідомлення в <code>then</code> та <code>catch</code></h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Помилки відображаються як звичайні повідомлення.</p>
+            <p>Логіка відображення повідомлень знаходиться всередині виконавця Promise.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Для rejected використовуйте стиль error.</p>
+            <p>Обробляйте успішний результат у <code>then()</code>, а відхилення — у <code>catch()</code>. Створення промісу та його обробка мають бути розділені.</p>
           </div>
         </div>
-
+      
         <div class="item">
-          <h3><span class="item-num">25.</span> Формуйте повідомлення строго за шаблоном</h3>
+          <h3><span class="item-num">14.</span> Використовуйте iziToast замість <code>console.log</code></h3>
+          <div class="callout c-error">
+            <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
+            <p>Результат роботи промісу виводиться лише в консоль або через <code>alert()</code>.</p>
+          </div>
+          <div class="callout c-how">
+            <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
+            <p>Показуйте результат сповіщенням iziToast.</p>
+          </div>
+        </div>
+      
+        <div class="item">
+          <h3><span class="item-num">15.</span> Для fulfilled використовуйте success</h3>
+          <div class="callout c-error">
+            <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
+            <p>Успішне замовлення відображається як помилка.</p>
+          </div>
+          <div class="callout c-how">
+            <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
+            <p>Для <code>fulfilled</code> використовуйте <code>iziToast.success()</code>.</p>
+          </div>
+        </div>
+      
+        <div class="item">
+          <h3><span class="item-num">16.</span> Для rejected використовуйте error</h3>
+          <div class="callout c-error">
+            <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
+            <p>Скасоване замовлення відображається як успішне.</p>
+          </div>
+          <div class="callout c-how">
+            <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
+            <p>Для <code>rejected</code> використовуйте <code>iziToast.error()</code>.</p>
+          </div>
+        </div>
+      
+        <div class="item">
+          <h3><span class="item-num">17.</span> Формуйте повідомлення строго за шаблоном</h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
             <p>Текст повідомлення відрізняється від вимог ТЗ.</p>
@@ -3466,24 +3370,37 @@
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
             <ul>
-              <li>Для fulfilled: <code>✅ Fulfilled promise in ${delay}ms</code></li>
-              <li>Для rejected: <code>❌ Rejected promise in ${delay}ms</code></li>
+              <li>Для fulfilled: <code>☕ Order ready in ${delay}ms</code></li>
+              <li>Для rejected: <code>❌ Order canceled after ${delay}ms</code></li>
             </ul>
           </div>
         </div>
-
+      
         <div class="item">
-          <h3><span class="item-num">26.</span> Перевіряйте весь сценарій роботи</h3>
+          <h3><span class="item-num">18.</span> Зберігайте дані кожного відправлення окремо</h3>
+          <div class="callout c-error">
+            <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
+            <p>Повторне відправлення форми змінює дані попереднього замовлення.</p>
+          </div>
+          <div class="callout c-how">
+            <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
+            <p>Зчитуйте <code>delay</code> і <code>state</code> в локальні змінні всередині обробника <code>submit</code>. Кожен проміс має використовувати дані свого відправлення.</p>
+          </div>
+        </div>
+      
+        <div class="item">
+          <h3><span class="item-num">19.</span> Перевіряйте весь сценарій роботи</h3>
           <div class="callout c-tip">
             <div class="head"><span class="mark">★</span>ПЕРЕД ЗДАЧЕЮ ПЕРЕВІРТЕ</div>
             <ul>
-              <li>Start спочатку неактивна.</li>
-              <li>Для минулої дати з'являється iziToast.</li>
-              <li>Таймер коректно завершується.</li>
-              <li>Інпут після завершення знову доступний.</li>
-              <li>Promise створюється із затримкою.</li>
-              <li>Fulfilled та Rejected показують різні повідомлення.</li>
-              <li>У консолі немає помилок.</li>
+              <li>Форма не відправляється без заповнених обов’язкових полів.</li>
+              <li>Після submit сторінка не перезавантажується.</li>
+              <li>Проміс завершується після заданої затримки.</li>
+              <li>Fulfilled та rejected показують різні сповіщення.</li>
+              <li>Тексти повідомлень відповідають ТЗ.</li>
+              <li>Повторні відправлення працюють коректно.</li>
+              <li>Код відформатовано Prettier.</li>
+              <li>На живій сторінці в консолі немає помилок і попереджень.</li>
             </ul>
           </div>
         </div>
