@@ -3166,18 +3166,18 @@
         <div class="module-banner">
           <span class="tag">МОДУЛЬ 10</span>
           <h2>Асинхронний JavaScript і проміси</h2>
-          <p class="msub">Генератор сповіщень Sunny Coffee: FormData, проміси та iziToast.</p>
+          <p class="msub">Панель бариста Sunny Coffee: Promise та журнал замовлень.</p>
         </div>
       
         <div class="item">
           <h3><span class="item-num">1.</span> Використовуйте Vite</h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Домашня робота запускається через Live Server або проєкт створений без Vite.</p>
+            <p>Проєкт відкривається через Live Server або подвійним кліком по HTML-файлу.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Використовуйте готовий шаблон із ТЗ та запускайте проєкт через <code>npm run dev</code>.</p>
+            <p>Створіть репозиторій із шаблону <code>goit-js-hw-template</code>, встановіть залежності та запускайте проєкт через <code>npm run dev</code>.</p>
           </div>
         </div>
       
@@ -3185,222 +3185,158 @@
           <h3><span class="item-num">2.</span> Дотримуйтесь структури проєкту</h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Файли мають неправильні назви або розташовані не в тих папках.</p>
+            <p>Файли перейменовано або створено дублікати сторінки, стилів чи меню.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Дотримуйтесь структури з ТЗ. Виконуйте завдання у файлах <code>index.html</code> і <code>app.js</code>.</p>
+            <p>Працюйте з файлами шаблону: розміткою в <code>index.html</code>, стилями в <code>styles.css</code>, меню в <code>menu.js</code> і логікою в <code>main.js</code>.</p>
           </div>
         </div>
       
         <div class="item">
-          <h3><span class="item-num">3.</span> Встановлюйте iziToast через npm</h3>
+          <h3><span class="item-num">3.</span> Використовуйте готові дані меню</h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Бібліотека підключається через CDN.</p>
+            <p>Час приготування повторюється в різних місцях або задається довільно.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Встановіть iziToast через npm та імпортуйте її в JS-файлі.</p>
+            <p>Імпортуйте <code>PREP_TIME</code> з <code>menu.js</code> та визначайте час приготування за вибраним напоєм.</p>
           </div>
         </div>
       
         <div class="item">
-          <h3><span class="item-num">4.</span> Не забувайте імпортувати стилі бібліотеки</h3>
-          <div class="callout c-error">
-            <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Імпортовано лише JS бібліотеки.</p>
-          </div>
-          <div class="callout c-how">
-            <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Окрім основного імпорту iziToast, підключіть її CSS через <code>import</code>.</p>
-          </div>
-        </div>
-      
-        <div class="item">
-          <h3><span class="item-num">5.</span> Збережіть атрибути полів форми</h3>
+          <h3><span class="item-num">4.</span> Збережіть атрибути форми</h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
             <p>Змінено назви полів або значення радіокнопок.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Використовуйте назви <code>delay</code> і <code>state</code>, значення <code>fulfilled</code> та <code>rejected</code>. Збережіть атрибути <code>required</code>, а для кнопки — <code>type="submit"</code>.</p>
+            <p>Збережіть назви полів <code>drink</code> і <code>state</code>, а також значення станів <code>fulfilled</code> та <code>rejected</code> з ТЗ.</p>
           </div>
         </div>
       
         <div class="item">
-          <h3><span class="item-num">6.</span> Створюйте Promise після submit форми</h3>
+          <h3><span class="item-num">5.</span> Обробляйте submit форми</h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Проміс створюється під час введення даних або до відправлення форми.</p>
+            <p>Обробник спрацьовує лише при кліку на кнопку або форма перезавантажує сторінку.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Створюйте новий проміс в обробнику події <code>submit</code> для кожного відправлення форми.</p>
+            <p>Додайте обробник події <code>submit</code> на форму та скасуйте стандартну поведінку через <code>event.preventDefault()</code>.</p>
           </div>
         </div>
       
         <div class="item">
-          <h3><span class="item-num">7.</span> Не забувайте <code>preventDefault()</code></h3>
+          <h3><span class="item-num">6.</span> Зчитуйте дані через FormData</h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Після відправлення форми сторінка перезавантажується.</p>
+            <p>Назва напою або рішення бариста зчитуються не з поточного відправлення форми.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Викликайте <code>event.preventDefault()</code> на початку обробника <code>submit</code>.</p>
+            <p>Створіть <code>FormData</code> під час <code>submit</code> і отримайте значення полів <code>drink</code> та <code>state</code>.</p>
           </div>
         </div>
       
         <div class="item">
-          <h3><span class="item-num">8.</span> Зчитуйте значення через FormData</h3>
+          <h3><span class="item-num">7.</span> Створюйте Promise для кожного замовлення</h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Дані форми зчитуються іншим способом, хоча ТЗ вимагає FormData.</p>
+            <p>Один спільний проміс повторно використовується для всіх замовлень.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Створіть FormData для форми й отримайте значення полів <code>delay</code> та <code>state</code> через метод <code>get()</code>.</p>
+            <p>Створюйте новий Promise після кожного <code>submit</code>. Для <code>makeOrder</code> передавайте час вибраного напою та рішення бариста.</p>
           </div>
         </div>
       
         <div class="item">
-          <h3><span class="item-num">9.</span> Перетворюйте <code>delay</code> на число</h3>
+          <h3><span class="item-num">8.</span> Завершуйте Promise після часу приготування</h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Затримка залишається рядком після зчитування з форми.</p>
+            <p>Promise завершується одразу або не враховує обраний напій.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Перетворіть значення <code>delay</code> на число за допомогою <code>Number()</code>.</p>
+            <p>Використовуйте час приготування як затримку. Після неї виконайте або відхиліть Promise відповідно до вибраного стану.</p>
           </div>
         </div>
       
         <div class="item">
-          <h3><span class="item-num">10.</span> Використовуйте <code>delay</code> у <code>setTimeout</code></h3>
+          <h3><span class="item-num">9.</span> Передавайте час приготування в результаті Promise</h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Проміс завершується миттєво незалежно від введеної затримки.</p>
+            <p>У <code>resolve</code> чи <code>reject</code> передається готовий текст замість часу приготування.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Передавайте <code>delay</code> у <code>setTimeout()</code>. Викликайте <code>resolve</code> або <code>reject</code> усередині його колбека.</p>
+            <p>Передайте час приготування в обох випадках, щоб використати його в обробнику результату.</p>
           </div>
         </div>
       
         <div class="item">
-          <h3><span class="item-num">11.</span> Враховуйте обраний статус</h3>
+          <h3><span class="item-num">10.</span> Додавайте замовлення до журналу одразу</h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Проміс завжди виконується успішно незалежно від обраної радіокнопки.</p>
+            <p>Рядок з’являється лише після завершення Promise.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Для <code>fulfilled</code> викликайте <code>resolve</code>, а для <code>rejected</code> — <code>reject</code>.</p>
+            <p>Після відправлення форми одразу додайте до журналу рядок зі статусом «у роботі…». Функція <code>addOrderRow</code> має повернути створений елемент.</p>
           </div>
         </div>
       
         <div class="item">
-          <h3><span class="item-num">12.</span> Передавайте <code>delay</code> у <code>resolve</code> та <code>reject</code></h3>
+          <h3><span class="item-num">11.</span> Оновлюйте той самий рядок</h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>У resolve або reject передаються готові повідомлення чи виклики iziToast.</p>
+            <p>Після завершення приготування додається новий рядок замість оновлення замовлення.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Передавайте лише значення затримки: <code>resolve(delay)</code> або <code>reject(delay)</code>.</p>
+            <p>Збережіть елемент, який повернула <code>addOrderRow</code>, і змініть його клас та текст у <code>then</code> або <code>catch</code>.</p>
           </div>
         </div>
       
         <div class="item">
-          <h3><span class="item-num">13.</span> Показуйте повідомлення в <code>then</code> та <code>catch</code></h3>
+          <h3><span class="item-num">12.</span> Додавайте час завершення у finally</h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Логіка відображення повідомлень знаходиться всередині виконавця Promise.</p>
+            <p>Час завершення додається лише для успішного або лише для скасованого замовлення.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Обробляйте успішний результат у <code>then()</code>, а відхилення — у <code>catch()</code>. Створення промісу та його обробка мають бути розділені.</p>
+            <p>Додавайте час у <code>finally</code>, який виконується після обох результатів Promise.</p>
           </div>
         </div>
       
         <div class="item">
-          <h3><span class="item-num">14.</span> Використовуйте iziToast замість <code>console.log</code></h3>
+          <h3><span class="item-num">13.</span> Зберігайте дані кожного замовлення окремо</h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Результат роботи промісу виводиться лише в консоль або через <code>alert()</code>.</p>
+            <p>Під час кількох одночасних замовлень оновлюється не той рядок або відображаються дані іншого напою.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Показуйте результат сповіщенням iziToast.</p>
+            <p>Зберігайте напій, час приготування та елемент журналу в змінних відповідного обробника <code>submit</code>.</p>
           </div>
         </div>
       
         <div class="item">
-          <h3><span class="item-num">15.</span> Для fulfilled використовуйте success</h3>
-          <div class="callout c-error">
-            <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Успішне замовлення відображається як помилка.</p>
-          </div>
-          <div class="callout c-how">
-            <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Для <code>fulfilled</code> використовуйте <code>iziToast.success()</code>.</p>
-          </div>
-        </div>
-      
-        <div class="item">
-          <h3><span class="item-num">16.</span> Для rejected використовуйте error</h3>
-          <div class="callout c-error">
-            <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Скасоване замовлення відображається як успішне.</p>
-          </div>
-          <div class="callout c-how">
-            <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Для <code>rejected</code> використовуйте <code>iziToast.error()</code>.</p>
-          </div>
-        </div>
-      
-        <div class="item">
-          <h3><span class="item-num">17.</span> Формуйте повідомлення строго за шаблоном</h3>
-          <div class="callout c-error">
-            <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Текст повідомлення відрізняється від вимог ТЗ.</p>
-          </div>
-          <div class="callout c-how">
-            <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <ul>
-              <li>Для fulfilled: <code>☕ Order ready in ${delay}ms</code></li>
-              <li>Для rejected: <code>❌ Order canceled after ${delay}ms</code></li>
-            </ul>
-          </div>
-        </div>
-      
-        <div class="item">
-          <h3><span class="item-num">18.</span> Зберігайте дані кожного відправлення окремо</h3>
-          <div class="callout c-error">
-            <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Повторне відправлення форми змінює дані попереднього замовлення.</p>
-          </div>
-          <div class="callout c-how">
-            <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Зчитуйте <code>delay</code> і <code>state</code> в локальні змінні всередині обробника <code>submit</code>. Кожен проміс має використовувати дані свого відправлення.</p>
-          </div>
-        </div>
-      
-        <div class="item">
-          <h3><span class="item-num">19.</span> Перевіряйте весь сценарій роботи</h3>
+          <h3><span class="item-num">14.</span> Перевіряйте весь сценарій роботи</h3>
           <div class="callout c-tip">
             <div class="head"><span class="mark">★</span>ПЕРЕД ЗДАЧЕЮ ПЕРЕВІРТЕ</div>
             <ul>
-              <li>Форма не відправляється без заповнених обов’язкових полів.</li>
-              <li>Після submit сторінка не перезавантажується.</li>
-              <li>Проміс завершується після заданої затримки.</li>
-              <li>Fulfilled та rejected показують різні сповіщення.</li>
-              <li>Тексти повідомлень відповідають ТЗ.</li>
-              <li>Повторні відправлення працюють коректно.</li>
-              <li>Код відформатовано Prettier.</li>
-              <li>На живій сторінці в консолі немає помилок і попереджень.</li>
+              <li>Замовлення одразу з’являється в журналі зі статусом «у роботі…».</li>
+              <li>Для обох рішень бариста відображається відповідний фінальний статус.</li>
+              <li>Оновлюється той самий рядок замовлення.</li>
+              <li>У рядку є напій, статус, час приготування та час завершення.</li>
+              <li>Кілька замовлень із різним часом приготування завершуються незалежно.</li>
+              <li>Форма не перезавантажує сторінку.</li>
+              <li>Код відформатовано Prettier, у консолі немає помилок і попереджень.</li>
             </ul>
           </div>
         </div>
