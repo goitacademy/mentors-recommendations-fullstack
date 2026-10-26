@@ -2942,7 +2942,7 @@
         <div class="module-banner">
           <span class="tag">МОДУЛЬ 9</span>
           <h2>Модульність коду і Vite</h2>
-          <p class="msub">Vite-шаблон, npm-бібліотеки, форма з localStorage та SimpleLightbox.</p>
+          <p class="msub">Vite-шаблон, npm-бібліотеки, форма з localStorage та GLightbox.</p>
         </div>
 
         <div class="item">
@@ -3013,19 +3013,19 @@
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Бібліотека SimpleLightbox самостійно обробляє кліки по зображеннях. Додаткові слухачі не потрібні.</p>
+            <p>Бібліотека GLightbox самостійно обробляє кліки по зображеннях. Додаткові слухачі не потрібні.</p>
           </div>
         </div>
 
         <div class="item">
-          <h3><span class="item-num">7.</span> Ініціалізуйте SimpleLightbox після рендера галереї</h3>
+          <h3><span class="item-num">7.</span> Ініціалізуйте GLightbox після рендера галереї</h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
             <p>Екземпляр бібліотеки створюється до додавання елементів у DOM.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Спочатку відрендерте галерею, а потім створіть екземпляр SimpleLightbox.</p>
+            <p>Спочатку відрендерте галерею, а потім створіть екземпляр GLightbox.</p>
           </div>
         </div>
 
@@ -3037,31 +3037,31 @@
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Окрім імпорту бібліотеки, імпортуйте файл стилів SimpleLightbox.</p>
+            <p>Окрім імпорту бібліотеки, імпортуйте файл стилів GLightbox.</p>
           </div>
         </div>
 
         <div class="item">
-          <h3><span class="item-num">9.</span> Налаштуйте підписи до зображень</h3>
+          <h3><span class="item-num">9.</span> Налаштуйте селектор до посилання</h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
-            <p>Підписи відсутні або не відповідають вимогам завдання.</p>
+            <p>Властивість selector відсутня або не відповідає вимогам завдання.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Використовуйте атрибут <code>alt</code> як джерело підпису, розташовуйте його знизу та задайте затримку появи 250 мс через налаштування бібліотеки.</p>
+            <p>Використовуйте властивість <code>selector</code> з коректним класом посилання для правильної ініціалізації бібліотеки</p>
           </div>
         </div>
 
         <div class="item">
-          <h3><span class="item-num">10.</span> Оголосіть <code>formData</code> поза функціями</h3>
+          <h3><span class="item-num">10.</span> Оголосіть <code>formState</code> поза функціями</h3>
           <div class="callout c-error">
             <div class="head"><span class="mark">●</span>ТИПОВА ПОМИЛКА</div>
             <p>Об'єкт для зберігання даних створюється всередині обробників подій.</p>
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Створіть об'єкт <code>formData</code> один раз у глобальній області видимості.</p>
+            <p>Створіть об'єкт <code>formState</code> один раз у глобальній області видимості.</p>
           </div>
         </div>
 
@@ -3109,7 +3109,7 @@
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Перед записом у <code>formData</code> та localStorage використовуйте метод <code>trim()</code>.</p>
+            <p>Перед записом у <code>formState</code> та localStorage використовуйте метод <code>trim()</code>.</p>
           </div>
         </div>
 
@@ -3121,7 +3121,7 @@
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Оновлюйте лише ту властивість об'єкта <code>formData</code>, яка відповідає зміненому полю.</p>
+            <p>Оновлюйте лише ту властивість об'єкта <code>formState</code>, яка відповідає зміненому полю.</p>
           </div>
         </div>
 
@@ -3145,7 +3145,7 @@
           </div>
           <div class="callout c-how">
             <div class="head"><span class="mark">✓</span>ЯК ПРАВИЛЬНО</div>
-            <p>Після успішного сабміту очистіть форму, localStorage та об'єкт <code>formData</code>.</p>
+            <p>Після успішного сабміту очистіть форму, localStorage та об'єкт <code>formState</code>.</p>
           </div>
         </div>
 
